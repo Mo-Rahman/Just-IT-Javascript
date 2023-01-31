@@ -114,7 +114,7 @@ console.log(`my name is ${firstName}.`);
 // 2: Create Variables storing your name, your age and your favourite film or tv series. Using template literals I want you to log a sentence including these values to the console. 
 
 let myName = "Mohammed";
-let age = 'old';
+let age = 'secret';
 let favouriteMovie = "The Lord of the rings";
 
 console.log(`My name is ${myName} and I am ${age} and one of my favourite movies is ${favouriteMovie}`)
