@@ -108,12 +108,18 @@ if (age >= 18) {
   console.log("Too young");
 }
 
+age >= 18
+  ? console.log(`You are ${age} - here is your drink`)
+  : console.log("Too young");
+
 // 2: Declare a variable called "Password". Write an if statement that checks how many characters are in the password, if the password has more than 8 characters log the password to the console, if the password has less than 8 characters log to the console that the password is too short.
 
 let password = "Pass";
 
 if (password.length >= 8) {
-  console.log(`This is your password: ${password}`);
+  console.log(
+    `This is your password: ${password} and has ${password.length} characters`
+  );
 } else {
   console.log("Your password is too short");
 }
@@ -155,3 +161,13 @@ function isPalindrome(word) {
 
 let testPalidrome = isPalindrome("anna");
 console.log(testPalidrome);
+
+// Solution not using a function for palindrome
+
+// let num2 = 1001;
+// let numReversed = num.toString().split("").reverse().join("");
+// if (num.toString() === numReversed) {
+//   console.log("is a palindrome");
+// } else {
+//   console.log("Isn't a palindrome");
+// }
