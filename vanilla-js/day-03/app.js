@@ -128,7 +128,7 @@ while (twenty >= 1) {
 
 // Task 4: Using a loop generate 5 random numbers between 1-50. For each number generated, check if the number is divisible by 5 or not. Log whether it is divisible by 5 or not to the console.
 
-// let counter = 5;
+// let counter = 5
 
 for (let i = 0; i < 5; i++) {
   let newNumber = Math.floor(Math.random() * 50);
