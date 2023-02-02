@@ -108,14 +108,38 @@ for (let i = 0; i < addMovies.length; i++) {
 }
 console.log(favShowsandMovies);
 
+// Chris's solution - task-1
+
+let favFilms = [
+  "Lord of the rings",
+  "Matrix",
+  "Game of thrones",
+  "Breaking bad",
+  "One-piece",
+];
+console.log(favFilms);
+favFilms.push("Snatch", "Star wars");
+console.log(favFilms);
+
+for (let i = 0; i < favFilms; i++) {
+  console.log(favFilms[i]);
+}
+
 // Task 2: Generate 10 random numbers between 1-100 and log them to the console.
 
 // let randomNumbers;
 
 for (let i = 0; i < 10; i++) {
   // randomNumbers.push(Math.floor(Math.random() * 100));
-  let randomNumbers = Math.floor(Math.random() * 100);
+  let randomNumbers = Math.floor(Math.random() * 100) + 1;
   console.log(randomNumbers);
+}
+
+// Chris solution task 2
+
+for (let i = 0; i < 10; i++) {
+  let randomnumber = Math.round(Math.random() * 100) + 1;
+  console.log(randomnumber);
 }
 
 // Task 3: Create a loop that counts backwards from 20-0. Logging the numbers to the console.
@@ -126,15 +150,32 @@ while (twenty >= 1) {
   twenty--;
 }
 
+// Chris's solution task 3
+
+for (let i = 20; i > 0; i--) {
+  console.log(i);
+}
+
 // Task 4: Using a loop generate 5 random numbers between 1-50. For each number generated, check if the number is divisible by 5 or not. Log whether it is divisible by 5 or not to the console.
 
 // let counter = 5
 
 for (let i = 0; i < 5; i++) {
-  let newNumber = Math.floor(Math.random() * 50);
+  let newNumber = Math.floor(Math.random() * 50) + 1;
   if (newNumber % 5 === 0) {
     console.log(`${newNumber} is divisable by 5`);
   } else {
     console.log(`${newNumber} isn't divisable by 5`);
+  }
+}
+
+// Chris's solution task 4
+
+for (let i = 0; i < 5; i++) {
+  let testnumber = Math.floor(Math.random() * 50) + 1;
+  if (testnumber % 5 === 0) {
+    console.log(`${testnumber} is divisable by 5`);
+  } else {
+    console.log(`${testnumber} isn't divisable by 5`);
   }
 }
