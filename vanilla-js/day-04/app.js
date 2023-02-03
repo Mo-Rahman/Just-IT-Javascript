@@ -105,14 +105,24 @@ console.log(squaredAnon(3));
 
 // 1: Write a function with parameters of first name and surname, that outputs a personalised greeting using the arguments passed to the function.
 
+// Function Declaration
 function person(firstName, surname) {
   return `Hello ${firstName} ${surname}`;
 }
 
 console.log(person("Mohammed", "Rahman"));
 
+// Task 1 Chris' solution
+
+const greeting2 = (firstName, surname) => {
+  return `Hello ${firstName} ${surname} how are you?`;
+};
+
+console.log(greeting2("Jane", "Doe"));
+
 // 2: Write a function that takes in a number and checks whether or not it is odd or even.
 
+// Arrow Function
 const oddEven = (num) => {
   if (num % 2 === 0) {
     return `${num} is even`;
@@ -122,10 +132,24 @@ const oddEven = (num) => {
 };
 
 console.log(oddEven(2));
+
+// Task 2 Chris' solution
+
+const evenOdd = (n) => {
+  if (n % 2 === 0) {
+    return `${n} is an even number`;
+  } else {
+    return `${n} is an odd number`;
+  }
+};
+
+console.log(evenOdd(2));
+
 // 3: Write an ATM function that takes in parameters of withdrawAmount and pinNumber. The function should check that the pinNumber is correct and that the withdrawAmmount is less than the account balance. If the pin is correct and the balance is sufficient, approve the transaction. If not decline the transaction.
 
+// Arrow Function
 const atm1 = (amount, pinNumber) => {
-  let secretPin = 12345;
+  let secretPin = 1234;
   let balance = 500;
 
   if (secretPin === pinNumber && balance >= amount) {
@@ -136,76 +160,90 @@ const atm1 = (amount, pinNumber) => {
     return `Withdrawal amount £${amount}: £${balance} balance - insufficent funds`;
 };
 
-console.log(atm1(550, 12345));
+console.log(atm1(550, 1234));
+
+// Task 3 Chris' solution
+
+let accBal = 1000;
+let myPin = 0000;
+const withdraw = (withdrawAmount, pinNum) => {
+  if (accBal >= withdrawAmount && pinNum === myPin) {
+    return `Transaction approved. Please collect your  £${amount}`;
+  } else if (accBal >= withdrawAmount && pinNum !== myPin) {
+    return `Transaction denied. Incorrect Pin number`;
+  } else {
+    return `Transaction denied, Insufficient funds`;
+  }
+};
 
 // Self Learning - Objects
 // Object Literal
-var person1 = {
-  firstName: "Mo",
-  lastName: "Rahman",
-  job: "Web Developer",
-  favFood: "Curry",
-};
+// var person1 = {
+//   firstName: "Mo",
+//   lastName: "Rahman",
+//   job: "Web Developer",
+//   favFood: "Curry",
+// };
 
-let prop = "job";
-// console.log(person1[prop]);
+// let prop = "job";
+// // console.log(person1[prop]);
 
-// Retrieve information using the "." dot notation
+// // Retrieve information using the "." dot notation
 
-// console.log(person1.firstName);
+// // console.log(person1.firstName);
 
-// Retrieve information using the "[]" bracket notation
-// console.log(person1["lastName"]);
+// // Retrieve information using the "[]" bracket notation
+// // console.log(person1["lastName"]);
 
-// console.log(person1);
+// // console.log(person1);
 
-// You can also create an object like this - It will create an empty object - using the Constructor method
+// // You can also create an object like this - It will create an empty object - using the Constructor method
 
-// const newPerson = new Object();
-// console.log(newPerson);
-// // To add a new key-value to this empty object
-// newPerson.firstName = "John";
-// console.log(newPerson);
+// // const newPerson = new Object();
+// // console.log(newPerson);
+// // // To add a new key-value to this empty object
+// // newPerson.firstName = "John";
+// // console.log(newPerson);
 
-// Updating objects using dot notation
-person1.favFood = "Khao Soi";
+// // Updating objects using dot notation
+// person1.favFood = "Khao Soi";
 
-// Updating objects using Bracket notation
-person1["firstName"] = "Mohammed";
-// The favourite food is now Khao Soi and not Curry
-// console.log(person1.favFood);
+// // Updating objects using Bracket notation
+// person1["firstName"] = "Mohammed";
+// // The favourite food is now Khao Soi and not Curry
+// // console.log(person1.favFood);
 
-// View the person1 object and you can see Khao Soi.
-// console.log(person1);
+// // View the person1 object and you can see Khao Soi.
+// // console.log(person1);
 
-for (let prop in person1) {
-  console.log(prop + ": " + person1[prop]);
-}
+// for (let prop in person1) {
+//   console.log(prop + ": " + person1[prop]);
+// }
 
-let jonny = {
-  age: 30,
-  hair: "black",
-  eyes: "brown",
-  job: "developer",
-};
+// let jonny = {
+//   age: 30,
+//   hair: "black",
+//   eyes: "brown",
+//   job: "developer",
+// };
 
-let friends = {
-  friend1: jonny,
-  friend2: {
-    age: 35,
-    hair: "brown",
-    eyes: "green",
-    job: "electrician",
-  },
-};
+// let friends = {
+//   friend1: jonny,
+//   friend2: {
+//     age: 35,
+//     hair: "brown",
+//     eyes: "green",
+//     job: "electrician",
+//   },
+// };
 
-console.log(friends);
+// console.log(friends);
 
-let numbers = [5, 10, 15, 20];
+// let numbers = [5, 10, 15, 20];
 
-const mult10 = (num) => {
-  return num * 10;
-};
+// const mult10 = (num) => {
+//   return num * 10;
+// };
 
-let multnumbers = numbers.map(mult10);
-console.log(multnumbers);
+// let multnumbers = numbers.map(mult10);
+// console.log(multnumbers);
