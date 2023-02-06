@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation</title>
+</head>
+
+<body>
+  <h2>Javscript HTML DOM</h2>
+
+  <div>
+    <p id="demo">Test</p>
+    <p onclick="this.innerHTML = 'change'">What happens when you click here <br> Method</p>
+  </div>
+
+  <div id="main" onclick="this.innerHTML = 'change'">
+    <!-- Don't do this! -->
+    <p>What happens when you click here <br> Method</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+  <br>
+
+  <button class="btn">Click me!</button>
+
+  <script>
+    // Dont do this!
+    const x = document.getElementById("main");
+    const y = document.getElementById("demo")
+    y.innerHTML = "test";
+    x.style.backgroundColor = "red";
+    x.innerHTML = y.innerHTML;
+    y.style.margin = "50px";
+
+    function myFunction() {
+      document.getElementById("demo").innerHTML = "Hello World";
+    }
+
+    myFunction()
+
+    // document.querySelector("button")
+    //   .addEventListener("click", function () {
+    //     alert("I just got clicked");
+    //     this.innerHTML = "I've been clicked"
+    //     button.
+    // });
+
+    let button = document.querySelector("button");
+    console.log(button)
+    button.addEventListener("click", function () {
+      alert("I just got clicked");
+      this.innerHTML = "I've been clicked"
+      button.style.backgroundColor = 'red';
+      button.style.color = 'yellow';
+    });
+
+    // console.log(Number("1") + Number("1"))
+
+    // console.log("4" >= 4)
+  </script>
+</body>
+
+
+</html>
