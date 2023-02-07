@@ -13,11 +13,11 @@
 
   <div>
     <p id="demo">Test</p>
+    <!-- Don't do this! best practice is using an external JS file-->
     <p onclick="this.innerHTML = 'change'">What happens when you click here <br> Method</p>
   </div>
-
+  <!-- Don't do this! best practice is using an external JS file-->
   <div id="main" onclick="this.innerHTML = 'change'">
-    <!-- Don't do this! -->
     <p>What happens when you click here <br> Method</p>
     <p>Lorem ipsum dolor sit amet.</p>
   </div>
@@ -26,7 +26,7 @@
   <button class="btn">Click me!</button>
 
   <script>
-    // Dont do this!
+    // Don't do this! best practice is using an external JS file
     const x = document.getElementById("main");
     const y = document.getElementById("demo")
     y.innerHTML = "test";
