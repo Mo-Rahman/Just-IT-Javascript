@@ -76,6 +76,8 @@
 //   // console.log(e.value);
 // });
 
+// -------------- Working code ------------------------------
+
 document.querySelectorAll("input").forEach((element) => {
   element.addEventListener("click", function () {
     // alert("I've been clicked");
@@ -101,6 +103,8 @@ document.querySelectorAll("input").forEach((element) => {
     // clickedEqual(display.value);
   });
 });
+
+// -------------- Working code ------------------------------
 
 // function clickedEqual(value) {
 //   document
