@@ -25,6 +25,6 @@ function buttonAnimation() {
 
   setTimeout(function () {
     activeButton.classList.remove("pressed");
-    document.querySelector("button").innerHTML = "Click Me!";
+    document.querySelector("button").innerHTML = "Click me!";
   }, 2000);
 }
