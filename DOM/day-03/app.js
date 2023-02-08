@@ -21,7 +21,7 @@ function timesUP() {
 }
 
 // This calls the function timesUp after 10 seconds
-let timeTosolve = setTimeout(timesUP, 10000);
+let timeTosolve = setTimeout(timesUP, 20000);
 // console.log(setTimeout);
 
 // let array = document.querySelectorAll("input");
@@ -41,12 +41,19 @@ let timeTosolve = setTimeout(timesUP, 10000);
 document.querySelectorAll("button").forEach((element) => {
   element.addEventListener("click", function () {
     // let buttonPressed = this.innerHTML;
+    let value = element.value;
     // alert(buttonPressed);
     // timerStop();
+    // console.log(buttonPressed);
+    // console.log(value);
     // timesUP();
-    let answer = getInputValue();
-    // console.log(answer);
-    timerStop(answer);
+    if (value === "btn") {
+      buttonAnimation();
+    } else {
+      let answer = getInputValue();
+      // console.log(answer);
+      timerStop(answer);
+    }
   });
 });
 
@@ -55,10 +62,10 @@ function timerStop(inputValue) {
   //   let test = document.getElementById("answer").value;
   //   console.log(test);
   if (answer === inputValue) {
-    console.log(inputValue);
-    console.log(answer);
+    // console.log(inputValue);
+    // console.log(answer);
     clearTimeout(timeTosolve);
-    alert(`Timer stopped you guessed ${inputValue}`);
+    alert(`Timer stopped you guessed right:${inputValue}`);
   } else {
     alert("Wrong answer");
   }
@@ -87,7 +94,7 @@ function getInputValue() {
   // Selecting the input element and get its value
   var inputVal = document.getElementById("myInput").value;
 
-  // Displaying the value
+  // return the value
   return inputVal;
 }
 
@@ -99,3 +106,17 @@ function counter() {
 }
 
 counter();
+
+// Animation!
+function buttonAnimation() {
+  let activeButton = document.querySelector(".btn");
+
+  // console.log(activeButton);
+  activeButton.classList.add("pressed");
+  document.querySelector(".btn").innerHTML = "BOOM";
+
+  setTimeout(function () {
+    activeButton.classList.remove("pressed");
+    document.querySelector(".btn").innerHTML = "Button Four";
+  }, 2000);
+}
