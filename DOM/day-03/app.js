@@ -12,7 +12,7 @@ function time() {
   document.getElementById("demo").innerHTML = date.toLocaleTimeString();
 }
 // Call the time function and it calls the function once!
-time();
+// time();
 // Set interval calls the time() function every second
 setInterval(time, 1000);
 
