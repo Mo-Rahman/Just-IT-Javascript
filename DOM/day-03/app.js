@@ -8,8 +8,8 @@
 // This deals with the timer
 // A function that sets the current time.
 function time() {
-  const d = new Date();
-  document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+  const date = new Date();
+  document.getElementById("demo").innerHTML = date.toLocaleTimeString();
 }
 // Call the time function and it calls the function once!
 time();
