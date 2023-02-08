@@ -98,6 +98,7 @@ function getInputValue() {
   return inputVal;
 }
 
+// Counter that counts up!
 var count = 1;
 function counter() {
   document.getElementById("div_1").innerHTML = `count:${count}`;
@@ -117,6 +118,6 @@ function buttonAnimation() {
 
   setTimeout(function () {
     activeButton.classList.remove("pressed");
-    document.querySelector(".btn").innerHTML = "Button Four";
+    document.querySelector(".btn").innerHTML = "Button";
   }, 2000);
 }
