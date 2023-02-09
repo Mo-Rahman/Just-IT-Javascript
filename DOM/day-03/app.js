@@ -38,7 +38,7 @@ let timeTosolve = setTimeout(timesUP, 20000);
 // let array = document.querySelectorAll("input");
 
 // TO SELECT MY BUTTONS!
-document.querySelectorAll("button").forEach((element) => {
+document.querySelectorAll("#btn-list button").forEach((element) => {
   element.addEventListener("click", function () {
     // let buttonPressed = this.innerHTML;
     let value = element.value;
