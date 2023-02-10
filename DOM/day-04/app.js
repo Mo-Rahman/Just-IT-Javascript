@@ -24,3 +24,11 @@ document.getElementById("example7").addEventListener("click", (e) => {
   // e.target.style.color = "red"; // Example to change style
   console.log(e.target.innerHTML); // See the new value for innerHTML after the pointer click!
 });
+
+document.querySelectorAll("#btn-list button").forEach((element) => {
+  element.addEventListener("click", (e) => {
+    // alert("i've been clicked");
+    e.target.innerHTML = "change me!";
+    console.log(e);
+  });
+});
