@@ -28,7 +28,17 @@ document.getElementById("example7").addEventListener("click", (e) => {
 document.querySelectorAll("#btn-list button").forEach((element) => {
   element.addEventListener("click", (e) => {
     // alert("i've been clicked");
-    e.target.innerHTML = "change me!";
+    e.target.innerHTML = "changed!";
+    e.target.style.color = "red";
     console.log(e);
   });
 });
+
+// document.querySelectorAll("#btn-list button").forEach((element) => {
+//   element.addEventListener("click", function (e) {
+//     // alert("i've been clicked");
+//     e.target.innerHTML = "changed!";
+//     e.target.style.color = "red";
+//     console.log(e);
+//   });
+// });
