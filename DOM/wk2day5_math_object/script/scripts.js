@@ -4,7 +4,7 @@ function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-10 - 1 + 1;
+
 
 array.forEach((element) => {
   element.addEventlister("click", function () {});
