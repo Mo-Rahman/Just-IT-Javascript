@@ -1,0 +1,13 @@
+.container {
+  margin: 5rem auto 0;
+  text-align: center;
+}
+
+.bigger-color {
+  color: red;
+  font-size: 2rem;
+}
+
+button {
+  font-size: 3rem;
+}
